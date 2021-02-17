@@ -1,0 +1,11 @@
+TODO:
+
+- Docker?
+
+localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
+
+MailCatcher (https://mailcatcher.me/)
+
+spnring boot actuator
+
+gradle
