@@ -52,15 +52,17 @@ What things you need to install the software and how to install them.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Install vagrant-reload plugin
+```
+vagrant plugin install vagrant-reload
+```
 
 Start vagrant script
-
 ```
-# vagrant up
+vagrant up
 ```
 
-In VM to initialize the Cloud SDK:
+In VM aften installation, initialize the Cloud SDK:
 ```
 gcloud init
 ```

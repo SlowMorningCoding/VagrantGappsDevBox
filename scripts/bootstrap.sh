@@ -48,9 +48,4 @@ apt install -y curl # curl is used in command lines or scripts to transfer data.
 apt install -y  # libcurl is an easy-to-use client-side URL transfer library,
 apt install -y libexpat1-dev # XML parsing C library - development kit
 
-echo "----------------"
-echo "Installin Git..."
-echo "----------------"
-apt install -y git
-
 exit 0

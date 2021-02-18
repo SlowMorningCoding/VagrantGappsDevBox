@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "------------------"
-echo "Install MongoDB..."
-echo "------------------"
+echo "---------------------"
+echo "Installing MongoDB..."
+echo "---------------------"
 
 #wget --progress=dot:giga http://downloads.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1404-3.2.4.tgz
 #tar xzf mongodb-linux-x86_64-ubuntu1404-3.2.4.tgz

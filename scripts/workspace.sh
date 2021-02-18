@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "----------------------"
-echo "Settingup Workspace..."
+echo "Setting up Workspace..."
 echo "----------------------"
 
 mkdir Workspace

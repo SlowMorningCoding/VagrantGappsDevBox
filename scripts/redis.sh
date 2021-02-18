@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "--------------------"
-echo "Install Redis..."
-echo "--------------------"
+echo "-------------------"
+echo "Installing Redis..."
+echo "-------------------"
 #wget --progress=dot:giga http://download.redis.io/releases/redis-3.0.7.tar.gz
 #tar xzf redis-3.0.7.tar.gz
 #cd redis-3.0.7

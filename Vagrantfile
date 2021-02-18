@@ -47,6 +47,7 @@ Vagrant.configure("2") do |config|
   # Install common packages
   config.vm.provision "shell", path: "scripts/bootstrap.sh", privileged: true
   config.vm.provision "shell", path: "scripts/keyboard-fi.sh"
+  config.vm.provision "shell", path: "scripts/git.sh"
 
   # Backend stuff
   config.vm.provision "shell", path: "scripts/java.sh"
@@ -60,8 +61,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/googlesdk.sh"
   config.vm.provision "shell", path: "scripts/docker.sh"
 
-  # Ide
-  config.vm.provision "shell", path: "scripts/ide.sh"
+  # Ide and workspace
+  config.vm.provision "shell", path: "scripts/vscode.sh"
+  config.vm.provision "shell", path: "scripts/intellij.sh"
+  config.vm.provision "shell", path: "scripts/workspace.sh"
 
   # trigger reload
   config.vm.provision :reload

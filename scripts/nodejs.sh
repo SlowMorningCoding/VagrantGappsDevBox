@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "----------------------"
-echo "Install Node.js..."
-echo "----------------------"
+echo "---------------------"
+echo "Installing Node.js..."
+echo "---------------------"
 
 sudo apt install -y nodejs
 sudo apt install -y npm
