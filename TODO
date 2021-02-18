@@ -1,11 +1,66 @@
 TODO:
 
-- Docker?
-
-localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
-
+EMAIL
+--------------------------------------
 MailCatcher (https://mailcatcher.me/)
+OR
+greenmail(https://greenmail-mail-test.github.io/greenmail/)
 
-spnring boot actuator
 
-gradle
+spring
+-----------------------
+spring boot service
+spring boot + actuator ?
+
+
+
+LOCALE AND KEYBOARD
+---------------------
+localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
+---
+/etc/default/keyboard
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="fi"
+XKBVARIANT=""
+XKBOPTIONS=""
+
+BACKSPACE="guess"
+
+From <https://stackoverflow.com/questions/38145087/how-to-change-the-keyboard-layout-from-the-vagrantfile> 
+
+sudo setxkbmap fi
+sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"fi\"/g' /etc/default/keyboard
+
+From <https://stackoverflow.com/questions/38145087/how-to-change-the-keyboard-layout-from-the-vagrantfile> 
+
+reboot
+---
+
+I am deploying a vagrant ubuntu 18.04 box, using the default bionic64 box. Installing the gui with these deb packages, via apt install:
+gnome
+language-pack-de
+language-pack-gnome-de
+even setting the keyboard layout with this bash script:
+#!/bin/bash
+sudo lacle-gen de_DE.UTF-8
+echo -e 'LANG=de_DE.UTF-8\nLC_ALL=de_DE.UTF-8' > /etc/default/locale
+sudo timedatectl set-timezone Europe/Berlin
+But i still need to open the region and language settings to select german keyboard layout. Install even more language packages... How can i automate this even more? My users don't want to klick somewhere, it should just work.
+
+From <https://serverfault.com/questions/928720/vagrant-ubuntu-box-configure-keyboard-layout> 
+
+---
+using sudo dpkg-reconfigure keyboard-configuration will change your keyboardlayout just for this session.
+go for sudo nano /etc/default/keyboard there you can change your keyboard settings.
+Find the line :
+XKBLAYOUT="xx"
+You can change layout and kboptions as well as your model and the kbvariant.
+Just put in tr for Turkish
+
+From <https://askubuntu.com/questions/342066/how-to-permanently-configure-keyboard> 
+
+

@@ -13,11 +13,12 @@ Vagrant.configure("2") do |config|
   config.vm.box = VAGRANT_BOX
   # Actual machine name
   config.vm.hostname = VM_NAME
+  #config.disksize.size = "60GB"
 
   # Provider-specific configuration for VirtualBox:
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    # vb.gui = true
+    vb.gui = true
     vb.name = VM_NAME
     #vb.cpus = 1
     #vb.memory = "4096"
@@ -31,6 +32,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--rtcuseutc", "on"]
     vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
   end
 
   # Create a private network, which allows host-only access to the machine
@@ -42,20 +44,14 @@ Vagrant.configure("2") do |config|
   # your network.
   # config.vm.network "public_network"
 
-  # Configure machine
-  config.vm.provision "shell", inline: <<-SHELL
-    echo "Run configure machine"
-    #sudo echo "LANG=en_US.UTF-8" >> /etc/environment
-    #sudo echo "LANGUAGE=en_US.UTF-8" >> /etc/environment
-    #sudo echo "LC_ALL=en_US.UTF-8" >> /etc/environment
-    #sudo echo "LC_CTYPE=en_US.UTF-8" >> /etc/environment
-  SHELL
-
   # Install common packages
   config.vm.provision "shell", path: "scripts/bootstrap.sh", privileged: true
+  config.vm.provision "shell", path: "scripts/keyboard-fi.sh"
 
   # Backend stuff
   config.vm.provision "shell", path: "scripts/java.sh"
+  config.vm.provision "shell", path: "scripts/maven.sh"
+  config.vm.provision "shell", path: "scripts/gradle.sh"
   config.vm.provision "shell", path: "scripts/redis.sh"
   config.vm.provision "shell", path: "scripts/mongodb.sh"
 
@@ -66,6 +62,9 @@ Vagrant.configure("2") do |config|
 
   # Ide
   config.vm.provision "shell", path: "scripts/ide.sh"
+
+  # trigger reload
+  config.vm.provision :reload
 
 
 end

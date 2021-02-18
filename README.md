@@ -60,27 +60,22 @@ Start vagrant script
 # vagrant up
 ```
 
-To initialize the Cloud SDK:
+In VM to initialize the Cloud SDK:
 ```
 gcloud init
 ```
 [Read more](https://cloud.google.com/sdk/docs/quickstart)
 
-## ⛏️ Pre install <a name = "pre_install"></a>
+## ⛏️ Pre install packages<a name = "pre_install"></a>
 
 - [Git](https://git-scm.com/)
 - [Java 8 (openjdk)](https://openjdk.java.net/)
 - [Apache Maven](https://maven.apache.org/)
+- [Gradle v6.8.2](https://gradle.org/)
 - [Redis](https://redis.io/)
 - [MongoDB](https://www.mongodb.com/) - Database
 - [NodeJs](https://nodejs.org/en/) - Server Environment
-<!--
-Modules
-[Express](https://expressjs.com/) - Server Framework
-[VueJs](https://vuejs.org/) - Web Framework
--->
 - [Google Cloud SDK](https://cloud.google.com/)
-- Docker
+- [Docker](https://www.docker.com/)
 - [VS Code](https://code.visualstudio.com/)
-<!-- addons: vscode-icons -->
-- [Intellij](https://www.jetbrains.com/idea/)(Community)
+- [Intellij](https://www.jetbrains.com/idea/) (Community)

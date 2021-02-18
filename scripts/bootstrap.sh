@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "------------------"
+echo "Upgrading linux..."
+echo "------------------"
+
 # provision script is run as root by default
 echo "Update packages"
 apt update
@@ -14,14 +18,39 @@ apt install -y ubuntu-desktop
 echo "Cleanup"
 apt -y autoremove
 
-echo "Install common packages"
+echo "----------------------------"
+echo "Installin common packages..."
+echo "----------------------------"
 apt install -y bash-completion
-apt install -y vim unzip
+apt install -y software-properties-common
+apt install -y build-essential # includes eg. dpkg-dev fakeroot g++ gcc make...
+apt install -y gettext
+apt install -y libssl-dev
+apt install -y ntp #  Network Time Protocol daemon and utility programs
+apt install -y nfs-common
+apt install -y dkms linux-headers-$(uname -r)
+
+echo "------------------------"
+echo "Installin common apps..."
+echo "------------------------"
+apt install -y vim
+apt install -y unzip
+
+echo "-----------------"
+echo "Installin Perl..."
+echo "-----------------"
+apt install -y perl
+
+echo "-----------------"
+echo "Installin Curl..."
+echo "-----------------"
+apt install -y curl # curl is used in command lines or scripts to transfer data.
+apt install -y  # libcurl is an easy-to-use client-side URL transfer library,
+apt install -y libexpat1-dev # XML parsing C library - development kit
+
+echo "----------------"
+echo "Installin Git..."
+echo "----------------"
 apt install -y git
-apt install -y build-essential libssl-dev # dpkg-dev fakeroot g++ gcc make...
-apt install -y curl libcurl4-gnutls-dev libexpat1-dev
-apt install -y gettext software-properties-common
-apt install -y ntp nfs-common linux-headers-$(uname -r)
-apt install -y perl dkms
 
 exit 0
