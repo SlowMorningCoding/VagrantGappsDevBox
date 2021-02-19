@@ -80,4 +80,4 @@ gcloud init
 - [Google Cloud SDK](https://cloud.google.com/)
 - [Docker](https://www.docker.com/)
 - [VS Code](https://code.visualstudio.com/)
-- [Intellij](https://www.jetbrains.com/idea/) (Community)
+- [Intellij](https://www.jetbrains.com/idea/) (Community + Ultimate)

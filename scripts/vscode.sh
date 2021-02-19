@@ -18,4 +18,7 @@ code --install-extension vscode-icons-team.vscode-icons
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension ms-azuretools.vscode-docker
 
+# Add Code on favorites
+gsettings set org.gnome.shell favorite-apps "$(gsettings get org.gnome.shell favorite-apps | sed s/.$//), 'code.desktop']"
+
 exit 0

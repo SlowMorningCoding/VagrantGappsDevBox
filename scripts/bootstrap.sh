@@ -34,7 +34,9 @@ echo "------------------------"
 echo "Installin common apps..."
 echo "------------------------"
 apt install -y vim
+apt install -y notepadqq
 apt install -y unzip
+apt install -y p7zip-full
 
 echo "-----------------"
 echo "Installin Perl..."

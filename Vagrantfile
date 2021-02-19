@@ -66,8 +66,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "scripts/intellij.sh"
   config.vm.provision "shell", path: "scripts/workspace.sh"
 
+  # Tweak
+  config.vm.provision "shell", path: "scripts/gnometweak.sh"
+
   # trigger reload
   config.vm.provision :reload
-
-
 end
