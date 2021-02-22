@@ -10,7 +10,7 @@ sudo apt install -y maven
 # sudo bash -c 'echo "export M2_HOME=/usr/share/maven" >> /etc/profile.d/maven.sh'
 # sudo bash -c 'echo "export MAVEN_HOME=/usr/share/maven" >> /etc/profile.d/maven.sh'
 # sudo bash -c 'echo "export PATH=\${M2_HOME}/bin:\${PATH}" >> /etc/profile.d/maven.sh'
-#source /etc/profile.d/maven.sh
+# source /etc/profile.d/maven.sh
 mvn -version
 
 exit 0
