@@ -79,5 +79,6 @@ gcloud init
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 - [Google Cloud SDK](https://cloud.google.com/)
 - [Docker](https://www.docker.com/)
+- [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
 - [VS Code](https://code.visualstudio.com/)
 - [Intellij](https://www.jetbrains.com/idea/) (Community + Ultimate)
