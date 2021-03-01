@@ -9,5 +9,7 @@ echo "-------------------"
 #mkdir -p /var/lib/redis/6379
 #cd ..
 sudo apt install redis-server
+# backup redis config
+sudo cp /etc/redis/redis.conf /etc/redis/redis.conf.default
 
 exit 0
