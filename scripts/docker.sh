@@ -17,6 +17,7 @@ sudo apt install -y apt-transport-https ca-certificates
 # sudo usermod -aG docker vagrant
 
 sudo apt install -y docker.io
+sudo apt install -y kubectl
 sudo systemctl enable --now docker
 sudo usermod -aG docker vagrant
 docker --version
